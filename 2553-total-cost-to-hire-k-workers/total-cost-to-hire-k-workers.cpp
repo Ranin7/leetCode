@@ -16,7 +16,6 @@ public:
             rightHeap.push(costs[right--]);
         }
 
-        // نبدأ التوظيف على k جولة
         for (int i = 0; i < k; ++i) {
             if (!leftHeap.empty() && (rightHeap.empty() || leftHeap.top() <= rightHeap.top())) {
                 total += leftHeap.top();
